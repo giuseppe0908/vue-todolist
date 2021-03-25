@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Todos</title>
+    <link rel="stylesheet" href="./assets/master.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  </head>
+  <body>
+
+     <div id="root">
+      <div class="container">
+        <h1>To do list</h1>
+        <ul class="todos">
+          <li v-for="todo in todo_ordinato">
+
+            <span class="title"
+            :class="(todo.status == 'checked') ? 'cancellato' : ' ' ">
+            {{todo.title}}</span>
+
+            <span class="comune edit"
+            v-if="todo.status != 'checked' "
+            ><i class="far fa-edit"></i></span>
+
+            <span class="comune remove"
+            v-if="todo.status != 'checked'"
+            @click="check(todo)"
+            ><i class="fas fa-check"></i></span>
+
+          </li>
+        </ul>
+        <input type="text" v-model="input" @keyup.enter="add">
+      </div>
+
+     </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./assets/main.js" charset="utf-8"></script>
+  </body>
+</html>
