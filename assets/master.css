@@ -1,8 +1,10 @@
 *{
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box;
   background-color: cyan;
+  font-family: cursive;
 }
 #root{
   display: flex;
@@ -16,12 +18,20 @@
     border: 1px solid black;
     min-width: 300px;
     max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+
 }
 h1{
   text-align: center;
+  color: white;
+
 }
 input{
   width: 100%;
+  border-radius: 10px;
+  background-color: white;
+
 }
 .container ul{
   list-style: none;

@@ -20,6 +20,7 @@
 
             <span class="comune edit"
             v-if="todo.status != 'checked' "
+            @click="edit(todo)"
             ><i class="far fa-edit"></i></span>
 
             <span class="comune remove"
@@ -34,7 +35,7 @@
 
           </li>
         </ul>
-        <input type="text" v-model="input" @keyup.enter="add">
+        <input type="text" v-model="input" @keyup.enter="add" placeholder="scrivi un nuovo todo">
       </div>
 
      </div>

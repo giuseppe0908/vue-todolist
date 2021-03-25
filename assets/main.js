@@ -46,9 +46,16 @@ var app = new Vue(
     check: function (todo){
 
       let i = this.todos.indexOf(todo);
-      console.log(i);
       this.todos[i].status = 'checked';
     },
+
+    edit: function (todo) {
+
+     let i = this.todos.indexOf(todo);
+     this.input = todo.title;
+     this.todos.splice(i, 1);
+    },
+
     remove: function(todo){
       let i = this.todos.indexOf(todo);
       this.todos.splice(i, 1);
