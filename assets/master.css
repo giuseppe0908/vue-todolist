@@ -1,8 +1,8 @@
 *{
   margin: 0;
   padding: 0;
-
   box-sizing: border-box;
+  background-color: cyan;
 }
 #root{
   display: flex;
@@ -32,6 +32,7 @@ input{
 
 .comune{
   float: right;
+  padding: 0 5px;
 }
 .comune:after{
   content: '';
