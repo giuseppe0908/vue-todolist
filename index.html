@@ -26,6 +26,11 @@
             v-if="todo.status != 'checked'"
             @click="check(todo)"
             ><i class="fas fa-check"></i></span>
+            <span
+            v-if="todo.status == 'checked'"
+            @click="remove(todo)" >
+            <i class="fas fa-trash"></i>
+            </span>
 
           </li>
         </ul>

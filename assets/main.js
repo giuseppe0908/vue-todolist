@@ -37,6 +37,7 @@ var app = new Vue(
       if (this.input != " ") {
         let aggiunta = {
           title: this.input,
+          status:"todo",
         }
         this.todos.push(aggiunta);
         this.input = " ";
@@ -45,8 +46,13 @@ var app = new Vue(
     check: function (todo){
 
       let i = this.todos.indexOf(todo);
+      console.log(i);
       this.todos[i].status = 'checked';
     },
+    remove: function(todo){
+      let i = this.todos.indexOf(todo);
+      this.todos.splice(i, 1);
+    }
 
   }
 
